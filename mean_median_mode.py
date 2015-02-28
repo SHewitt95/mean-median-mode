@@ -10,7 +10,7 @@ def main():
     while (len(numbers) != length_of_list):
         item = getNumber("Enter number %d: " %(index))
         numbers.append(item)
-        index++
+        index += 1
         
     print("")
     print("Here are your numbers: " + str(numbers))
