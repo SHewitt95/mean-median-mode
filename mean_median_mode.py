@@ -7,7 +7,7 @@ def main():
     length_of_list = getNumber("Enter the amount of numbers you want to use: ")
     
     index = 1 # Acts as counter so user knows how many numbers have been entered so far
-    for num in range(0, length_of_list):
+    for num in range(0, int(length_of_list)):
         item = getNumber("Enter number %d: " %(index))
         numbers.append(item)
         index += 1
@@ -20,7 +20,7 @@ def main():
     
     print("Mean: " + mean())
     print("Median: " + str(median()))
-    print("Mode: (mode, # of times mode appeared)" + mode())
+    print("Mode (mode, # of times mode appeared): " + mode())
     
 def getNumber(prompt):
     # Prompts user for starting number. Exception/While loop 
@@ -29,8 +29,7 @@ def getNumber(prompt):
     number = 0
     while (not success):
         try:
-            print(prompt)
-            number = int(raw_input())
+            number = float(raw_input(prompt))
             success = True
         except:
             pass
