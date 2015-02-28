@@ -26,7 +26,7 @@ def getNumber(prompt):
     # Prompts user for starting number. Exception/While loop 
     # catches inputs that aren't proper integers.
     success = False
-    while (!success):
+    while (not success):
         try:
             print(prompt)
             number = raw_input()
